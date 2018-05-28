@@ -1,0 +1,5 @@
+/home/karan/QtWorkspace/AdvancedC++/files/build/CMakeFiles/parsing_file.dir
+/home/karan/QtWorkspace/AdvancedC++/files/build/CMakeFiles/reading_binary.dir
+/home/karan/QtWorkspace/AdvancedC++/files/build/CMakeFiles/reading_file.dir
+/home/karan/QtWorkspace/AdvancedC++/files/build/CMakeFiles/structs_and_padding.dir
+/home/karan/QtWorkspace/AdvancedC++/files/build/CMakeFiles/writing_file.dir

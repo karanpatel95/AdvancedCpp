@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8.9)
+project (exception)
+add_executable(catch_exception src/catch_execption.cpp)
+add_executable(exception2 src/exception2.cpp)
+add_executable(custom_exception src/custom_exception.cpp)
+add_executable(catching_subclasses src/catching_subclasses.cpp)

@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/lists.dir/src/lists.cpp.o  -o lists -rdynamic 
