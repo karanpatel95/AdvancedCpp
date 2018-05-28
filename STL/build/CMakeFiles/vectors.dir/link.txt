@@ -1,1 +1,0 @@
-/usr/bin/c++       CMakeFiles/vectors.dir/src/vectors.cpp.o  -o vectors -rdynamic 

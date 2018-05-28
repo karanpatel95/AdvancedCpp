@@ -1,4 +1,0 @@
-/home/karan/QtWorkspace/AdvancedC++/STL/build/CMakeFiles/lists.dir
-/home/karan/QtWorkspace/AdvancedC++/STL/build/CMakeFiles/two_dimensional_vector.dir
-/home/karan/QtWorkspace/AdvancedC++/STL/build/CMakeFiles/vectors.dir
-/home/karan/QtWorkspace/AdvancedC++/STL/build/CMakeFiles/vectors_and_memory.dir
