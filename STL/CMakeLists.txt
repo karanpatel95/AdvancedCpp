@@ -2,7 +2,9 @@ cmake_minimum_required(VERSION 2.8.9)
 project (STL)
 
 add_compile_options(-std=c++11)
+
 add_executable(vectors src/vectors.cpp)
 add_executable(vectors_and_memory src/vectors_and_memory.cpp)
 add_executable(two_dimensional_vector src/two_dimensional_vector.cpp)
 add_executable(lists src/lists.cpp)
+add_executable(map src/map.cpp)
