@@ -34,7 +34,8 @@ const Complex &Complex::operator * (const Complex &other) {
 
     return *this;
 }
-std::ostream &operator << (std::ostream &out, const Complex &complex) {
+
+const std::ostream &operator << (std::ostream &out, const Complex &complex) {
     std::cout << "(" << complex.real << ") + (" << complex.imaginary << ")i";
 }
 
