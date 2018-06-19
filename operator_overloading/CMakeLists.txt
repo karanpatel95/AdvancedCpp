@@ -3,5 +3,11 @@ project (operator_overloading)
 
 add_compile_options(-std=c++11)
 
+include_directories(include)
+add_library(complex_class src/complex_class.cpp)
+
 add_executable(assignment_operator src/assignment_operator.cpp)
 add_executable(print_bitshift_operator src/print_bitshift_operator.cpp)
+add_executable(complex_implement src/complex_implement.cpp)
+
+target_link_libraries(complex_implement complex_class)
