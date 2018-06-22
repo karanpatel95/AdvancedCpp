@@ -15,16 +15,21 @@ public:
 
     void print() const;
 
+    //copy constructor
+    Complex(const Complex &other);
+
+    const Complex &operator = (const Complex &other);
+
     const Complex &operator + (const Complex &other);
 
     const Complex &operator - (const Complex &other);
 
     const Complex &operator * (const Complex &other);
 
-    friend const std::ostream &operator << (std::ostream &out, const Complex &complex);
+    friend std::ostream &operator << (std::ostream &out, const Complex &complex);
 };
 
-std::ostream const &operator << (std::ostream &out, const Complex &complex);
+std::ostream &operator << (std::ostream &out, const Complex &complex);
 
 }
 

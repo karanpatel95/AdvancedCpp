@@ -14,6 +14,18 @@ void Complex::print() const {
     std::cout << "(" << real << ") + (" << imaginary << ")i" << std::endl;
 }
 
+Complex::Complex(const Complex &other){
+    real = other.real;
+    imaginary = other.imaginary;
+}
+
+const Complex &Complex::operator = (const Complex &other) {
+    real = other.real;
+    imaginary = other.imaginary;
+
+    return *this;
+}
+
 const Complex &Complex::operator + (const Complex &other) {
     real = real + other.real;
     imaginary = imaginary + other.imaginary;
@@ -35,8 +47,9 @@ const Complex &Complex::operator * (const Complex &other) {
     return *this;
 }
 
-const std::ostream &operator << (std::ostream &out, const Complex &complex) {
-    std::cout << "(" << complex.real << ") + (" << complex.imaginary << ")i";
+std::ostream &operator << (std::ostream &out, const Complex &complex) {
+    out << "(" << complex.real << ") + (" << complex.imaginary << ")i";
+    return out;
 }
 
 }
