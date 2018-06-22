@@ -18,6 +18,8 @@ public:
     double getImaginary();
 
     void print();
+
+//    std::ostream &operator << (std::ostream &out, const ComplexClass complex);
 };
 
 }

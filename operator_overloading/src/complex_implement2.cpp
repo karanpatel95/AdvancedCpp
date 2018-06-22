@@ -8,5 +8,7 @@ int main(){
 
     std::cout << complex.getReal() << " + " << complex.getImaginary() << std::endl;
 
+    std::cout << complex << std::endl;
+
     return 0;
 }
