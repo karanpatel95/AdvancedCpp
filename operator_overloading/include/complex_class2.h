@@ -14,10 +14,12 @@ public:
     ComplexClass();
     ComplexClass(double real, double imaginary);
 
-    double getReal();
-    double getImaginary();
+    double getReal() const;
+    double getImaginary() const;
 
     void print();
+
+    ComplexClass operator *() const;
 };
 
 std::ostream &operator << (std::ostream &out, ComplexClass complex);

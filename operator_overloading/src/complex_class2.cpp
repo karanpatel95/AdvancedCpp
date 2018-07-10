@@ -14,12 +14,16 @@ void ComplexClass::print(){
     std::cout << "(" << real << ") + (" << imaginary << ")i" << std::endl;
 }
 
-double ComplexClass::getReal(){
+double ComplexClass::getReal() const {
     return real;
 }
 
-double ComplexClass::getImaginary(){
+double ComplexClass::getImaginary() const {
     return imaginary;
+}
+
+ComplexClass ComplexClass::operator *() const{
+    return ComplexClass(this->getReal(),-this->getImaginary());
 }
 
 std::ostream &operator << (std::ostream &out, ComplexClass complex){

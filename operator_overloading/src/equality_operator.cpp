@@ -15,5 +15,9 @@ int main(){
 
     std::cout << complex << " : " << complex2 << std::endl;
 
+    // overloading dereference operator as a complex conjugate
+
+    std::cout << "conjugate: " << *complex << std::endl;
+
     return 0;
 }
