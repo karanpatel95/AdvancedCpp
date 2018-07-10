@@ -6,14 +6,14 @@ int main(){
     ComplexClass complex(3, 4);
     ComplexClass complex2(3, 4);
 
-//    if(complex == complex2){
-//        std::cout << complex << " and " << complex2 << "are equal" << std::endl;
-//    }
-//    else{
-//        std::cout << complex << " and " << complex2 << "are NOT equal" << std::endl;
-//    }
+    if(complex == complex2){
+        std::cout << complex << " and " << complex2 << " are equal" << std::endl;
+    }
+    else{
+        std::cout << complex << " and " << complex2 << " are NOT equal" << std::endl;
+    }
 
-//    std::cout << complex << complex2 << std::endl;
+    std::cout << complex << " : " << complex2 << std::endl;
 
     return 0;
 }

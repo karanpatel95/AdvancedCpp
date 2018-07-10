@@ -2,11 +2,11 @@
 
 namespace operatorOverloading2 {
 
-ComplexClass::ComplexClass() : real(0), imaginary(0) {
+ComplexClass::ComplexClass() : real(0), imaginary(0){
 
 }
 
-ComplexClass::ComplexClass(double real, double imaginary) : real(real), imaginary(imaginary) {
+ComplexClass::ComplexClass(double real, double imaginary) : real(real), imaginary(imaginary){
 
 }
 
@@ -22,4 +22,12 @@ double ComplexClass::getImaginary(){
     return imaginary;
 }
 
+std::ostream &operator << (std::ostream &out, ComplexClass complex){
+    out << "(" << complex.getReal() << ") + (" << complex.getImaginary() << "i)";
+    return out;
+}
+
+bool operator == (ComplexClass complex, ComplexClass other){
+    return (complex.getReal() == other.getReal()) && (complex.getImaginary() && other.getImaginary());
+}
 }

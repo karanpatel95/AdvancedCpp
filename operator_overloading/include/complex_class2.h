@@ -18,10 +18,10 @@ public:
     double getImaginary();
 
     void print();
-
-//    std::ostream &operator << (std::ostream &out, const ComplexClass complex);
 };
 
+std::ostream &operator << (std::ostream &out, ComplexClass complex);
+bool operator == (ComplexClass complex, ComplexClass other);
 }
 
 #endif // COMPLEX_CLASS2_H
