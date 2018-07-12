@@ -18,7 +18,7 @@ public:
 };
 
 std::ostream &operator << (std::ostream &out, Test &test) {
-    std::cout << test.id << " : " << test.name;
+    out << test.id << " : " << test.name;
     return out;
 }
 
