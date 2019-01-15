@@ -4,3 +4,4 @@ project (features)
 add_compile_options(-std=c++11)
 
 add_executable(decltype src/decltype.cpp)
+add_executable(auto src/auto.cpp)
