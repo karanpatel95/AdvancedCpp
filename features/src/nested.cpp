@@ -27,5 +27,11 @@ int main() {
         std::cout << text << std::endl;
     }
 
+    std::cout << "==========" << std::endl;
+    textring.add({"nine", "ten", "eleven", "twelve"});
+    for(auto text : textring) {
+        std::cout << text << std::endl;
+    }
+
     return 0;
 }

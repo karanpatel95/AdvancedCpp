@@ -3,6 +3,8 @@
 
 #include <iostream>
 
+#include <initializer_list>
+
 template <class T>
 class ring {
 
@@ -28,6 +30,15 @@ public:
         array_ptr_[pos_++] = value;
         if(pos_ == size_) {
             pos_ = 0;
+        }
+    }
+
+    void add(std::initializer_list<T> values) {
+        for(auto value : values) {
+            array_ptr_[pos_++] = value;
+            if(pos_ == size_) {
+                pos_ = 0;
+            }
         }
     }
 
