@@ -31,7 +31,7 @@ int main() {
     test2.print();
 
     Test test3 = test2; // will invoke copy constructor
-    test3 = test; // this will using = operator
+    test3 = test; // this will use = operator
 
     return 0;
 }
