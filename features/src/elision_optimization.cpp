@@ -18,8 +18,9 @@ public:
         std::cout << "destructor" << std::endl;
     }
 
-    void operator =(const Test &other) {
+    Test &operator =(const Test &other) {
         std::cout << " = operator" << std::endl;
+        return *this;
     }
 
     friend std::ostream &operator <<(std::ostream &out, const Test &other);
