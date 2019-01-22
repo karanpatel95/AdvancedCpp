@@ -49,6 +49,10 @@ std::ostream &operator <<(std::ostream &out, Test &test) {
     return out;
 }
 
+Test getTest() {
+    return Test();
+}
+
 int main() {
 
     Test test;
@@ -62,6 +66,16 @@ int main() {
 
     Test test3 = test;
     std::cout << test3 << std::endl;
+
+    int check = 8;
+    int *pCheck = &check;
+    int &rCheck = check;
+    std::cout << pCheck << std::endl;
+    std::cout << &rCheck << std::endl;
+
+    Test &rTest = test;
+    // Test &rFunTest = getTest(); // this does not work
+    const Test &rFunTest = getTest();
 
     return 0;
 }
