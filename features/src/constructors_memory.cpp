@@ -53,6 +53,22 @@ Test getTest() {
     return Test();
 }
 
+void checkTest(const Test &test) {
+    std::cout << "LValue reference!" << std::endl;
+}
+
+void checkTest(Test &&test) {
+    std::cout << "RValue reference!" << std::endl;
+}
+
+void intValueTest(const int &value) {
+    std::cout << "LValue reference" << std::endl;
+}
+
+void intValueTest(int &&value) {
+    std::cout << "RValue reference" << std::endl;
+}
+
 int main() {
 
     Test test;
@@ -76,6 +92,20 @@ int main() {
     Test &rTest = test;
     // Test &rFunTest = getTest(); // this does not work
     const Test &rFunTest = getTest();
+
+    // -----------------------------------------
+
+    Test &lValue = test;
+    Test &&rValue = Test(); // RValue referece
+    Test &&rValue2 = getTest(); // RValue
+
+    checkTest(test);
+    checkTest(Test());
+    checkTest(getTest());
+
+    int number = 44;
+    intValueTest(++number); // LValue reference
+    intValueTest(number++); // RValue reference
 
     return 0;
 }
