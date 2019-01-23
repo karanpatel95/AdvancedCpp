@@ -43,6 +43,14 @@ int main() {
         std::cout << "wrong casting" << std::endl;
     }
 
+    Sister sister;
+    Sister *pss = &sister;
+
+    ppb = &brother;
+//    pss = static_cast<Sister *>(ppb);
+    pss = reinterpret_cast<Sister *>(ppb);
+
+    std::cout << pss << std::endl;
 
     return 0;
 }
