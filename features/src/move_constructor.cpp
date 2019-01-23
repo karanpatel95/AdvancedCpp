@@ -37,6 +37,14 @@ public:
         return *this;
     }
 
+    Test &operator =(Test &&other) {
+        std::cout << "move assignment operator" << std::endl;
+        delete[] _pBuffer;
+        _pBuffer = other._pBuffer;
+        other._pBuffer = nullptr;
+        return *this;
+    }
+
     friend std::ostream &operator <<(std::ostream &out, Test &test);
 
     ~Test() {
@@ -51,6 +59,10 @@ std::ostream &operator <<(std::ostream &out, Test &test) {
         std::cout << test._pBuffer[i] << " ";
     }
     return out;
+}
+
+Test getTest() {
+    return Test();
 }
 
 int main() {
@@ -69,6 +81,12 @@ int main() {
     std::vector<Test> vec;
     vec.push_back(Test(10));
     std::cout << vec[0] << std::endl;
+
+    //----------------------------------
+
+    Test test4;
+    test4 = getTest();
+    std::cout << test4 << std::endl;
 
     return 0;
 }
