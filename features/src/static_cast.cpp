@@ -2,7 +2,7 @@
 
 class Parent {
 public:
-    void speak() {
+    virtual void speak() {
         std::cout << "Parent!" << std::endl;
     }
 };
@@ -31,6 +31,18 @@ int main() {
     // Parent &&rRef = parent; // this does not work
     Parent &&rRef = static_cast<Parent &&>(parent);
     rRef.speak();
+
+    //-----------------------Dynamic Cast------
+    ppb = &parent;
+    pbb = static_cast<Brother *>(ppb); // this could be wrong
+
+    ppb = &parent;
+    pbb = dynamic_cast<Brother *>(ppb); // checks at runtime
+
+    if(pbb == nullptr) {
+        std::cout << "wrong casting" << std::endl;
+    }
+
 
     return 0;
 }
