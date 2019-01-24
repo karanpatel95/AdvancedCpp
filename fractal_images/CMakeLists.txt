@@ -9,3 +9,5 @@ add_library(bitmap src/bitmap.cpp)
 
 add_executable(main src/main.cpp)
 add_executable(virtual_destructor src/virtual_destructor.cpp)
+
+target_link_libraries(main bitmap)

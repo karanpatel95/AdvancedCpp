@@ -3,14 +3,16 @@
 
 #include <string>
 #include <cstdint>
+#include <memory>
 
 namespace bitmap {
 
 class Bitmap {
 
 private:
-    int _width;
-    int _height;
+    int _width{0};
+    int _height{0};
+    std::unique_ptr<uint8_t[]> _pPixels{nullptr};
 
 public:
     Bitmap(int width, int height);
