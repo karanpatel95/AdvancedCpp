@@ -7,16 +7,22 @@ int main() {
     const int HEIGHT = 800;
 
     bitmap::Bitmap bmp(WIDTH, HEIGHT);
-    bmp.setPixel(0, 0, 255, 0, 0);
 
-    for (int i = 0; i < WIDTH; i++) {
-        for (int j = 0; j < HEIGHT; j++) {
-            bmp.setPixel(i, j, 255, 0, 0);
+    double min = 999999;
+    double max = -999999;
+
+    for (int y = 0; y < HEIGHT; y++) {
+        for (int x = 0; x < WIDTH; x++) {
+            double xFractal = ((2.0 * x) / WIDTH) - 1;
+            double yFractal = ((2.0 * y) / HEIGHT) - 1;
+            if(yFractal < min) min = xFractal;
+            if(yFractal > max) max = xFractal;
         }
     }
 
+    std::cout << min << " : " << max << std::endl;
     bool val = bmp.write("test.bmp");
-    std::cout << val << std::endl;
+
     std::cout << "finished" << std::endl;
     return 0;
 }
