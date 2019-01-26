@@ -1,5 +1,6 @@
 #include <iostream>
 #include "bitmap.h"
+#include "mandelbrot.h"
 
 int main() {
 
@@ -15,8 +16,13 @@ int main() {
         for (int x = 0; x < WIDTH; x++) {
             double xFractal = ((2.0 * x) / WIDTH) - 1;
             double yFractal = ((2.0 * y) / HEIGHT) - 1;
-            if(yFractal < min) min = xFractal;
-            if(yFractal > max) max = xFractal;
+
+            int iterations = bitmap::Mandelbrot::getIterations(xFractal, yFractal);
+            bmp.setPixel(x, y, iterations, iterations, iterations);
+
+            if(iterations < min) min = xFractal;
+            if(iterations > max) max = xFractal;
+
         }
     }
 
